@@ -38,16 +38,20 @@ https://www.kaggle.com/code/jocelyndumlao/chatbot-for-mental-health-conversation
 ## Some Screenshots of This Webapp -
 
 ![image](https://github.com/ujjwal197629/Mental-Health-Chatbot/assets/129583515/98024e9e-3c89-4454-990c-751e3109d00d)
-Home Page
+
+                                                  Home Page
 
 ![image](https://github.com/ujjwal197629/Mental-Health-Chatbot/assets/129583515/fe06a19d-53ef-4a6d-a062-a31e1e9f631c)
-Mobile view
+
+                                                 Mobile view
 
 ![image](https://github.com/ujjwal197629/Mental-Health-Chatbot/assets/129583515/d93572b9-ca80-41e7-b9f3-7adc26d0f947)
-Login Page
+   
+                                                  Login Page
 
 ![image](https://github.com/ujjwal197629/Mental-Health-Chatbot/assets/129583515/bf57ea29-7c15-470f-86eb-5be11222fb26)
-Sign up page mobile view
+
+                                           Sign up page mobile view
 
 
 
