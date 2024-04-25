@@ -1,0 +1,8 @@
+.env
+*.sqlite3
+env_chatbot/
+migrations/
+.vscode/
+chat/migrations
+chat/__pycache__
+**/mental_health_chatbot/__pycache__

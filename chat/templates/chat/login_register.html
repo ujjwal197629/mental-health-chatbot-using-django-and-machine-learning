@@ -1,0 +1,147 @@
+{% extends 'main.html' %}
+
+{% block content%}
+ {% include 'navbar.html' %}
+{% if page == 'login' %}
+<div class="container-lg">
+    <div class="text-center">
+        <h2>
+            Welcome Back
+        </h2>
+    </div>
+
+    <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+            <form action="" method="POSt">
+                {% csrf_token %}
+                <label for="name" class="form-label">Username:</label>
+                <input type="text" name="username" class="form-control" id="name" placeholder="Username...">
+
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password...">
+
+                <div class="my-4 text-center">
+                    <button type="submit" class="btn btn-secondary">Login</button>
+                </div>
+            </form> 
+            <p class='d-inline-block'>Don't have an account?</p>
+            <a href = "{% url 'register' %}" class="text-decoration-none link-success mx-2">Sign Up</a>
+        </div>
+    </div>
+    
+</div>
+
+{% else %}
+<div class="container-lg">
+    <div class="text-center">
+        <h2>Create an account</h2>
+    </div>
+
+    <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <label for="email" class="form-label">First Name:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person"></i>
+                </span>
+                <input type="text" name="firstname" class="form-control" id="firstname" placeholder="e.g. Ujjwal" required>
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Enter your first name.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+              </div>
+
+              <label for="lastname" class="form-label">Last Name:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person"></i>
+                </span>
+                <input type="text" name="lastname" class="form-control" id="lastname" placeholder="e.g. Dumre" required>
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Enter your last name.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+              </div>
+
+              <label for="username" class="form-label">Username:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person"></i>
+                </span>
+                <input type="text" name="username" class="form-control" id="username" placeholder="e.g. Ujjwal" required>
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Choose username.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+              </div>
+
+              <label for="email" class="form-label">Email:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+                <input type="email" name="email" class="form-control" id="email" placeholder="e.g. Ujjwal@gmail.com" required>
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Enter your email address.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+              </div>
+
+              <label for="password" class="form-label">Password:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-asterisk"></i>
+                </span>
+                <input type="password" name="password" class="form-control" id="password" placeholder="" required>
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Enter your password.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+              </div>
+
+              <label for="password1" class="form-label">Password Again:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-asterisk"></i>
+                </span>
+                <input type="password" name="password1" class="form-control" id="password1" placeholder="" required>
+                <!-- tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Re-enter password.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+                </span>
+              </div>
+
+              <div class="my-4 text-center">
+                <button type="submit" class="btn btn-secondary">Sign Up</button>
+              </div>
+                
+            </form>
+            <span>
+              <p class='d-inline-block'>Already have an account?</p>
+            <a href = "{% url 'login' %}" class="text-decoration-none link-success mx-2">Login</a>
+            </span>
+        </div>
+
+    </div>
+</div>
+
+{% endif %}
+
+
+
+{% endblock content%}
+

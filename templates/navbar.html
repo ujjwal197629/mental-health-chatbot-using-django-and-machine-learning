@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md  navbar-light pt-5 pb-4 mb-5 fixed-top" style="background-color: #454679;">
+    <div class="container-xxl">
+        <!-- navbar brand / title -->
+      <div class="navbar-brand">
+        <span class="text-light fw-bold">
+            <i class="bi bi-chat-dots-fill"></i>
+          Mental Health Mate
+        </span>
+      </div>
+       <!-- toggle button for mobile nav -->
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      {% comment %} navbar links {% endcomment %}
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          
+          
+          
+
+          {%if request.user.is_authenticated%}
+          <li class="nav-item">
+            <a href="" class="nav-link link-light">Hello,  {{request.user}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{%url 'logout' %}" class="nav-link link-light">Logout</a>
+          </li>
+
+          
+
+
+          {% else %}
+          <li class="nav-item ">
+            <a class="nav-link link-light" href="{% url 'login' %}">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{%url 'register' %}" class="nav-link link-light">Signup</a>
+          </li>
+
+          
+         {%endif%} 
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+
+
