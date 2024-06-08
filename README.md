@@ -1,4 +1,4 @@
-# General Ai mental health chatbot- powered by Django & machine learning
+# A mental health chatbot- powered by Django & machine learning
 
 
 ## How To Use This
