@@ -1,7 +1,7 @@
 # A mental health chatbot- powered by Django & machine learning
 
 
-## How To Use This Project
+## How To Use This
 
 First create a virtual environment(highly recommended)and run...
 
