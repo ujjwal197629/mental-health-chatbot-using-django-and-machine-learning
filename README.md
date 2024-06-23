@@ -3,7 +3,7 @@
 
 ## How To Use This Project
 
-First create a virtual environment(highly recommended)and run...
+First create a virtual environment(highly recommended) and run...
 
 1. Run pip install -r requirements.txt to install dependencies
 
